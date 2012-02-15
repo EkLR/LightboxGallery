@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (C) 2012 Slawomir Iwanczuk <slawomir@iwanczuk.co>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+-->
+<layout>
+    <catalog_product_view>
+        <reference name="head">
+            <block type="core/template" name="lightboxgallery_head" template="lightboxgallery/head.phtml" ifconfig="lightboxgallery/general/enabled"/>
+            <action method="addJs" ifconfig="lightboxgallery/general/enabled"><script>lightbox.js</script></action>
+            <action method="addCss" ifconfig="lightboxgallery/general/enabled"><stylesheet>css/lightbox.css</stylesheet></action>
+        </reference>
+        <reference name="product.info.media">
+            <action method="setTemplate" ifconfig="lightboxgallery/general/enabled"><template>lightboxgallery/media.phtml</template></action>
+        </reference>
+    </catalog_product_view>
+    <review_product_list>
+        <reference name="head">
+            <block type="core/template" name="lightboxgallery_head" template="lightboxgallery/head.phtml" ifconfig="lightboxgallery/general/enabled"/>
+            <action method="addJs" ifconfig="lightboxgallery/general/enabled"><script>lightbox.js</script></action>
+            <action method="addCss" ifconfig="lightboxgallery/general/enabled"><stylesheet>css/lightbox.css</stylesheet></action>
+        </reference>
+        <reference name="product.info.media">
+            <action method="setTemplate" ifconfig="lightboxgallery/general/enabled"><template>lightboxgallery/media.phtml</template></action>
+        </reference>
+    </review_product_list>
+</layout>

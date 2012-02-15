@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (C) 2012 Slawomir Iwanczuk <slawomir@iwanczuk.co>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+-->
+<config>
+    <modules>
+        <Mage_LightboxGallery>
+            <version>1.0.0</version>
+        </Mage_LightboxGallery>
+    </modules>
+    <global>
+        <helpers>
+            <lightboxgallery>
+                <class>Mage_LightboxGallery_Helper</class>
+            </lightboxgallery>
+        </helpers>
+    </global>
+    <default>
+        <lightboxgallery>
+            <general>
+                <enabled>0</enabled>
+            </general>
+        </lightboxgallery>
+    </default>
+    <frontend>
+        <translate>
+            <modules>
+                <Mage_LightboxGallery>
+                    <files>
+                        <default>Mage_LightboxGallery.csv</default>
+                    </files>
+                </Mage_LightboxGallery>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <lightboxgallery>
+                    <file>lightboxgallery.xml</file>
+                </lightboxgallery>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <lightboxgallery module="lightboxgallery">
+                                            <title>Lightbox Gallery</title>
+                                            <sort_order>10</sort_order>
+                                        </lightboxgallery>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>
